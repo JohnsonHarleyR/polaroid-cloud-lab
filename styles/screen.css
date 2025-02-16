@@ -1,50 +1,107 @@
+@font-face {
+    font-family: "Inter";
+    src: url('../fonts/Inter_Regular.ttf');
+}
+
+@font-face {
+    font-family: "Inter Black";
+    src: url('../fonts/Inter_Black.ttf');
+}
+
+:root {
+    --bg-color: #E9E9E9;
+    --txt-color: #424242;
+    --accent-color: #FF3F3C;
+    --bg-corner-radius: 40;
+    --bg-gradient: linear-gradient(180deg, rgba(226, 226, 226, 1) 50%, rgba(214, 215, 214, 1) 100%);
+}
+
 body {
-    font-family: Helvetica, sans-serif;
-    color: #EAE8FF;
-    background: #2D3142;
-    padding: 0 40px;
-    text-align: center;
-}
-
-nav {
-    margin: 40px auto 0 auto;
-    width: 250px;
-    border-radius: 50px;
-    background: #212431;
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-evenly;
+    color: var(--txt-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    background-color: var(--bg-color);
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
-    list-style-type: none;
+header {
+    /* margin-left: 50px;
+    margin-top: 32px; */
+    padding: 20px;
+    margin-bottom: 100px;
+}
+
+main {
+    background: url('../images/polaroid.png') no-repeat center 130px;
+    margin: 0 auto;
+    width: 1000px;
+    text-align: center;
+}
+
+.hero {
+    /* text-align: center; */
+    min-height: 800px;
+    /* border: 1px solid red; */
+}
+
+.details {
+    text-align: left;
+    padding: 0 100px;
+}
+
+.cta {
+    text-align: center;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Inter Black', sans-serif;
+    font-weight: bold;
+    /* text-align: center; */
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    /* font-weight: normal; */
+}
+
+.hero h2 {
+    /* font-size: 180px; */
+    font-size: 9rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1em;
     margin: 0;
 }
 
-nav ul li a {
-    display: inline-block;
-    padding: 20px;
-    color: #EAE8FF;
-    text-decoration: none;
-    font-size: 1.2em;
+h3 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 0;
 }
 
-h1 {
-    font-size: 8em;
-    letter-spacing: -2px;
+.details ul li {
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0 0 0 70px;
 }
 
-h1 strong {
-    background: rgb(34,193,195);
-    background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+li.wifi {
+    background: url(../images/wifi-solid.svg) no-repeat center left;
 }
 
-img.about {
-    opacity: 0.5;
+li.cloud {
+    background: url(../images/cloud-arrow-up-solid.svg) no-repeat center left;
+}
+
+li.qr {
+    background: url(../images/qrcode-solid.svg) no-repeat center left;
+}
+
+li.photo {
+    background: url(../images/photo-film-solid.svg) no-repeat center left;
 }
